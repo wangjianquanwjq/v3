@@ -30,6 +30,6 @@ import Header from './header/index.vue'
     border-bottom: 1px solid #c9c6c6;
     box-sizing: border-box;
     height: 56px;
-    box-shadow: var --el-box-shadow Basic Shadow
+    box-shadow: 0px 4px 4px #c8c8c8;
 }
 </style>

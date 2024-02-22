@@ -55,7 +55,9 @@ onMounted(() => {
     min-height: 400px;
     border: none;
 }
-
+.el-menu--collapse{
+    border: none;
+}
 .el-menu-item.is-active {
     background-color: rgb(231, 235, 240) !important;
 }
