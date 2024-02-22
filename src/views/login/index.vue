@@ -19,7 +19,7 @@ const tableData = ref<RowVO[]>([
 ])
 const loginButFun = () => {
   router.push({
-    path: '/layout/table'
+    path: '/table'
   })
 }
 </script>
