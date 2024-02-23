@@ -20,12 +20,38 @@ const tableData = ref<RowVO[]>([
 </script>
 
 <template>
-    <main>
+    <div class="content-box-heigth">
         <vxe-table :data="tableData">
             <vxe-column type="seq" width="60"></vxe-column>
             <vxe-column field="name" title="Name"></vxe-column>
             <vxe-column field="sex" title="Sex"></vxe-column>
             <vxe-column field="age" title="Age"></vxe-column>
         </vxe-table>
-    </main>
+        <vxe-table :data="tableData">
+            <vxe-column type="seq" width="60"></vxe-column>
+            <vxe-column field="name" title="Name"></vxe-column>
+            <vxe-column field="sex" title="Sex"></vxe-column>
+            <vxe-column field="age" title="Age"></vxe-column>
+        </vxe-table>
+        <vxe-table :data="tableData">
+            <vxe-column type="seq" width="60"></vxe-column>
+            <vxe-column field="name" title="Name"></vxe-column>
+            <vxe-column field="sex" title="Sex"></vxe-column>
+            <vxe-column field="age" title="Age"></vxe-column>
+        </vxe-table>
+
+        <vxe-table :data="tableData">
+            <vxe-column type="seq" width="60"></vxe-column>
+            <vxe-column field="name" title="Name"></vxe-column>
+            <vxe-column field="sex" title="Sex"></vxe-column>
+            <vxe-column field="age" title="Age"></vxe-column>
+        </vxe-table>
+        <vxe-table :data="tableData">
+            <vxe-column type="seq" width="60"></vxe-column>
+            <vxe-column field="name" title="Name"></vxe-column>
+            <vxe-column field="sex" title="Sex"></vxe-column>
+            <vxe-column field="age" title="Age"></vxe-column>
+        </vxe-table>
+        
+    </div>
 </template>

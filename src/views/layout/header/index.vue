@@ -3,15 +3,18 @@ import { ref, reactive, toRefs, computed } from 'vue'
 import { layoutStore } from '@/stores/layout'
 import { ArrowDown } from '@element-plus/icons-vue'
 import { useRouter } from 'vue-router'
-import { useFullscreen } from '@vueuse/core'
-const { toggle, isFullscreen } = useFullscreen()
+import { useFullscreen, useDark, useToggle } from '@vueuse/core'
+const { toggle } = useFullscreen()//全屏
+// 暗黑模式切换
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
 const router = useRouter();
 const current = computed(() => {
     return router.currentRoute.value
 })
-console.log('current', current)
 const store = layoutStore();
 const show = ref(true)
+const theme = ref<boolean>(false)
 const change = function () {
     show.value = !show.value;
     store.changeisCollapse();
@@ -43,6 +46,8 @@ const exit = function () {
         </div>
 
         <div class="right">
+            <el-switch v-model="isDark" inline-prompt active-text="dark" size="large" inactive-text="light"
+                @change="toggleDark" />
             <el-icon class="pointer" @click="toggle">
                 <FullScreen />
             </el-icon>
@@ -98,7 +103,7 @@ const exit = function () {
     .right {
         display: flex;
         padding-right: 10px;
-        width: 140px;
+        width: 200px;
         justify-content: space-between;
         align-items: center;
 

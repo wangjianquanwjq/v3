@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Aside from './aside/index.vue'
 import Header from './header/index.vue'
+import Tag from './tag/index.vue'
 </script>
 <template>
     <div class="common-layout">
@@ -12,6 +13,7 @@ import Header from './header/index.vue'
                 <el-header class="header">
                     <Header></Header>
                 </el-header>
+                <Tag />
                 <el-main>
                     <router-view></router-view>
                 </el-main>
@@ -19,17 +21,18 @@ import Header from './header/index.vue'
         </el-container>
     </div>
 </template>
-<style scoped>
-.aside {
-    height: 100vh;
-    background-color: #545c64;
-}
+<style scoped lang="less">
+.common-layout {
+    .aside {
+        height: 100vh;
+        background-color: #545c64;
+    }
 
-.header {
-    background-color: #fff;
-    border-bottom: 1px solid #c9c6c6;
-    box-sizing: border-box;
-    height: 56px;
-    box-shadow: 0px 4px 4px #c8c8c8;
+    .header {
+        border-bottom: 1px solid #c9c6c6;
+        box-sizing: border-box;
+        height: 56px;
+        // box-shadow: 0px 4px 4px #c8c8c8;
+    }
 }
 </style>
